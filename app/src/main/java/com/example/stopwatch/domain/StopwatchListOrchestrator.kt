@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.example.stopwatch.domain
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job

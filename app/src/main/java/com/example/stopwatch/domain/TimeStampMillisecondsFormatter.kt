@@ -1,6 +1,6 @@
-package com.example.stopwatch
+package com.example.stopwatch.domain
 
-class TimestampMillisecondsFormatter {
+class TimeStampMillisecondsFormatter {
     fun format(timestamp: Long): String {
         val millisecondsFormatted = (timestamp % 1000).pad(3)
         val seconds = timestamp / 1000

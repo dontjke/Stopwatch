@@ -1,9 +1,11 @@
-package com.example.stopwatch
+package com.example.stopwatch.domain
+
+import com.example.stopwatch.data.StopwatchState
 
 class StopwatchStateHolder(
     private val stopwatchStateCalculator: StopwatchStateCalculator,
     private val elapsedTimeCalculator: ElapsedTimeCalculator,
-    private val timestampMillisecondsFormatter: TimestampMillisecondsFormatter,
+    private val timestampMillisecondsFormatter: TimeStampMillisecondsFormatter,
 ) {
     var currentState: StopwatchState = StopwatchState.Paused(0)
         private set

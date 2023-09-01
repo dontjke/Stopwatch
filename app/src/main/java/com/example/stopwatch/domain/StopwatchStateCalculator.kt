@@ -1,7 +1,9 @@
-package com.example.stopwatch
+package com.example.stopwatch.domain
+
+import com.example.stopwatch.data.StopwatchState
 
 class StopwatchStateCalculator(
-    private val timestampProvider: TimestampProvider,
+    private val timestampProvider: TimeStampProvider,
     private val elapsedTimeCalculator: ElapsedTimeCalculator,
 ) {
 

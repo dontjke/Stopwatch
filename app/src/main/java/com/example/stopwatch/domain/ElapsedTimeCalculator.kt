@@ -1,7 +1,9 @@
-package com.example.stopwatch
+package com.example.stopwatch.domain
+
+import com.example.stopwatch.data.StopwatchState
 
 class ElapsedTimeCalculator (
-    private val timestampProvider: TimestampProvider
+    private val timestampProvider: TimeStampProvider
 ) {
     fun calculate(state: StopwatchState.Running): Long {
         val currentTimestamp = timestampProvider.getMilliseconds()
