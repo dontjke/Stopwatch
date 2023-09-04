@@ -1,4 +1,4 @@
-package com.example.stopwatch.ui
+package com.example.stopwatch.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,7 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
 
     private val liveData: MutableLiveData<String> = MutableLiveData()
 

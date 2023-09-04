@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.stopwatch.databinding.ActivityMainBinding
+import com.example.stopwatch.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
