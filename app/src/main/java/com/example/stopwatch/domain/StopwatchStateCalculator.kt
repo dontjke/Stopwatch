@@ -1,7 +1,9 @@
-package com.example.stopwatch
+package com.example.stopwatch.domain
+
+import com.example.stopwatch.data.StopwatchState
 
 class StopwatchStateCalculator(
-    private val timestampProvider: TimestampProvider,
+    private val timestampProvider: TimeStampProvider,
     private val elapsedTimeCalculator: ElapsedTimeCalculator,
 ) {
 
@@ -15,12 +17,14 @@ class StopwatchStateCalculator(
                 )
             }
         }
+
     fun calculatePausedState(oldState: StopwatchState): StopwatchState.Paused =
         when (oldState) {
             is StopwatchState.Running -> {
                 val elapsedTime = elapsedTimeCalculator.calculate(oldState)
                 StopwatchState.Paused(elapsedTime = elapsedTime)
             }
+
             is StopwatchState.Paused -> oldState
         }
 }
